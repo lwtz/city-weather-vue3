@@ -28,10 +28,10 @@
       <span>sky: {{ dados.sky }}</span>
     </div> -->
 
-    <div v-if="dados.Temperatura > 0" class="flex justify-center">
+    <div v-if="dados.Temperatura > 0" class="flex justify-center z-10 sticky">
       <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
         <div>
-          <span> {{ dados.Cidade }}</span>
+          <span> {{ dados.Cidade }} - {{country}}</span>
         </div>
 
         <div>
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-    <img :src="countrybg" alt="" />
+    <img :src="countrybg" alt="" class="-mt-60 opacity-25 object-cover w-full h-full" />
   </div>
 </template>
 
