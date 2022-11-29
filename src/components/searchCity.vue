@@ -118,7 +118,7 @@ export default {
           `https://api.openweathermap.org/data/2.5/weather?q=${this.cityDefault}&units=metric&appid=${api_key}&lang=pt_br`,
         )
         .then((response) => {
-          console.log(response.data)
+          // console.log(response.data)
           this.dados.Cidade = response.data.name
           this.dados.Temperatura = response.data.main.temp
           this.dados.Temperatura_Maxima = response.data.main.temp_max
