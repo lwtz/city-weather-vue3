@@ -33,7 +33,7 @@ export default createStore({
           `https://api.openweathermap.org/data/2.5/weather?q=${payload}&units=metric&appid=ba605efc18f1572f61892fe426f18a1a&lang=pt_br`,
         )
         .then((response) => {
-          console.log(response.data)
+          // console.log(response.data)
           state.cityData.Cidade = response.data.name
           state.cityData.Temperatura = response.data.main.temp
           state.cityData.Temperatura_Maxima = response.data.main.temp_max
@@ -43,7 +43,7 @@ export default createStore({
           state.cityData.humidity = response.data.main.humidity
           state.cityData.speed = response.data.wind.speed
           state.cityData.country = response.data.sys.country
-          console.log('store', state.cityData)
+          // console.log('store', state.cityData)
         })
     },
   },

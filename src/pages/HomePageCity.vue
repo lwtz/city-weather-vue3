@@ -24,7 +24,7 @@ export default {
 
   methods: {
     getData() {
-      console.log(this.$store.getters.getSpeed)
+      // console.log(this.$store.getters.getSpeed)
       return `aaaa`
     },
   },
