@@ -1,31 +1,32 @@
 <template>
   <div>
     <searchCityVue />
-
-    <!-- <div v-if="getData">Cidade: {{ cidade }} temperatura: {{ temperatura }}</div> -->
+    <CardInfo />
   </div>
 </template>
 
 <script>
 import searchCityVue from '@/components/searchCity.vue'
+import CardInfo from '@/components/CardInfo.vue'
 
 export default {
-  //   name: 'HomePageCity',
-  //   data() {
-  //     return {
-  //       cidade: '',
-  //       temperatura: '',
-  //     }
-  //   },
+  name: 'HomePageCity',
+  data() {
+    return {
+      cidade: '',
+      temperatura: '',
+    }
+  },
   components: {
     searchCityVue,
+    CardInfo,
   },
-  //   computed: {
-  //     getData() {
-  //       this.cidade = this.$store.state.cidade.name),
-  //         (this.temperatura = this.$store.state.cidade.main.temp)
-  //       return true
-  //     },
-  //   },
+
+  methods: {
+    getData() {
+      console.log(this.$store.getters.getSpeed)
+      return `aaaa`
+    },
+  },
 }
 </script>
